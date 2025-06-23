@@ -10,7 +10,7 @@ import { DialogComponent } from '../app/@shared/components/dialog/dialog.compone
   styleUrls: ['./mynsweepr.component.sass']
 })
 export class MynsweeprComponent implements OnInit {
-  state: BoardState;
+  state: BoardState = new BoardState();
 
   constructor(private mynsweeprSvc: MynsweeprService, private dialogSvc: DialogService) {
     this.dialogSvc.dialogClosed.subscribe((dialog: DialogComponent) => {

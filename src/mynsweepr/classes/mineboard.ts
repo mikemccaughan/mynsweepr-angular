@@ -6,9 +6,9 @@ import { Coords } from './coords';
 export class Mineboard {
   remainingChanged: EventEmitter<number>;
   activeCoordsChanged: EventEmitter<Coords>;
-  cells: Minecell[];
-  cellsByCoords?: Minecell[][];
-  difficulty: Partial<Difficulty>;
+  cells: Minecell[] = [];
+  cellsByCoords?: Minecell[][] = [];
+  difficulty: Partial<Difficulty> = {};
   private activeCoordsField: Coords;
   public get activeCoords(): Coords {
     return this.activeCoordsField;
@@ -22,7 +22,7 @@ export class Mineboard {
       }
     }
   }
-  private cellsField: number[][];
+  private cellsField: number[][] = [];
   constructor() {
     this.remainingChanged = new EventEmitter<number>();
     this.activeCoordsField = new Coords();

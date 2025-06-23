@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mynsweepr-angular:build"
+            "buildTarget": "mynsweepr-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mynsweepr-angular:build:production"
+              "buildTarget": "mynsweepr-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mynsweepr-angular:build"
+            "buildTarget": "mynsweepr-angular:build"
           }
         },
         "test": {

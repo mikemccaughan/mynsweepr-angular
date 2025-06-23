@@ -2,7 +2,7 @@ import { EventEmitter } from '@angular/core';
 
 export class Minecell {
   isHiddenChanged: EventEmitter<Minecell>;
-  private isHiddenField: boolean;
+  private isHiddenField: boolean = true;
   public get isHidden(): boolean {
     return this.isHiddenField;
   }
@@ -16,7 +16,7 @@ export class Minecell {
   }
 
   hasFlagChanged: EventEmitter<Minecell>;
-  private hasFlagField: boolean;
+  private hasFlagField: boolean = false;
   public get hasFlag(): boolean {
     return this.hasFlagField;
   }
@@ -30,7 +30,7 @@ export class Minecell {
   }
 
   isActiveChanged: EventEmitter<Minecell>;
-  private isActiveField: boolean;
+  private isActiveField: boolean = false;
   public get isActive(): boolean {
     return this.isActiveField;
   }
@@ -43,10 +43,10 @@ export class Minecell {
     }
   }
 
-  index: number;
-  value: number;
-  x: number;
-  y: number;
+  index: number = -1;
+  value: number = 0;
+  x: number = -1;
+  y: number = -1;
   get nearby(): number | null {
     return this.value >= 0 ? this.value : null;
   }
