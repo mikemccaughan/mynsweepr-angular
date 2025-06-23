@@ -43,11 +43,11 @@ export class Minecell {
     }
   }
 
-  index?: number;
-  value?: number;
-  x?: number;
-  y?: number;
-  get nearby(): number {
+  index: number;
+  value: number;
+  x: number;
+  y: number;
+  get nearby(): number | null {
     return this.value >= 0 ? this.value : null;
   }
   get hasMine(): boolean {
@@ -57,10 +57,10 @@ export class Minecell {
     if (cell) {
       this.isHidden = typeof cell.isHidden === 'boolean' ? cell.isHidden : true;
       this.hasFlag = typeof cell.hasFlag === 'boolean' ? cell.hasFlag : false;
-      this.index = cell.index;
-      this.value = cell.value;
-      this.x = cell.x;
-      this.y = cell.y;
+      this.index = cell.index ?? -1;
+      this.value = cell.value ?? 0;
+      this.x = cell?.x ?? -1;
+      this.y = cell?.y ?? -1;
     }
     this.isHiddenChanged = new EventEmitter<Minecell>();
     this.hasFlagChanged = new EventEmitter<Minecell>();

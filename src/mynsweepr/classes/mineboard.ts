@@ -84,7 +84,15 @@ export class Mineboard {
           index: cellIndex
         });
         this.cells[cellIndex] = cell;
-        this.cellsByCoords[x][y] = cell;
+        if (!Array.isArray(this.cellsByCoords)) {
+          this.cellsByCoords = [];
+        }
+        if (!Array.isArray(this.cellsByCoords[x])) {
+          this.cellsByCoords[x] = [];
+        }
+        if (!this.cellsByCoords?.[x]?.[y]) {
+          this.cellsByCoords[x][y] = cell;
+        }
         cellIndex++;
       }
     }
@@ -110,5 +118,62 @@ export class Mineboard {
     this.generate();
     this.buildCells();
     this.sortCells();
+  }
+  public getCell(indexOrX: number, y: number | undefined): Minecell | undefined {
+    const maxX = this.difficulty.width || 9;
+    const maxY = this.difficulty.height || 9;
+    let x: number | undefined = undefined;
+    let index: number | undefined = undefined;
+    if (y === undefined) {
+      index = indexOrX;
+    } else {
+      x = indexOrX;
+    }
+    if (typeof y === 'number' && y >= 0 && y < maxY &&
+      typeof x === 'number' && x >= 0 && x < maxX) {
+      if (this.cellsByCoords?.[x]?.[y]) {
+        return this.cellsByCoords[x][y];
+      } else {
+        return undefined;
+      }
+    } else if (typeof index === 'number' && index >= 0 && index < this.cells.length) {
+      return this.cells[index];
+    }
+  }
+  public setCell(indexOrX: number, yOrCell: number | Minecell | undefined, cell: Minecell | undefined): Mineboard {
+    const maxX = this.difficulty?.width || 9;
+    const maxY = this.difficulty?.height || 9;
+    let x: number | undefined = undefined;
+    let y: number | undefined = undefined;
+    let index: number | undefined = undefined;
+    if (yOrCell === undefined || yOrCell instanceof Minecell) {
+      index = indexOrX;
+      if (yOrCell instanceof Minecell) {
+        cell = yOrCell;
+      }
+    } else {
+      x = +indexOrX;
+      y = +yOrCell;
+    }
+    if (typeof y === 'number' && y >= 0 && y < maxY &&
+        typeof x === 'number' && x >= 0 && x < maxX &&
+        cell instanceof Minecell) {
+      console.assert(cell instanceof Minecell, 'Expected cell to be an instance of Minecell');
+      if (this.cellsByCoords?.[x]?.[y]) {
+        this.cellsByCoords[x][y] = cell;
+        const cellIndex = cell.index;
+        if (typeof cellIndex === 'number' && cellIndex >= 0 && cellIndex < this.cells.length) {
+          this.cells[cellIndex] = cell;
+        } else {
+          throw new Error(`Cell at coordinates (${x}, ${y}) does not have a valid index.`);
+        }
+      } else {
+        throw new Error(`Cell at coordinates (${x}, ${y}) does not exist.`);
+      }
+    } else if (typeof index === 'number' && index >= 0 && index < this.cells.length && cell instanceof Minecell) {
+      this.cells[index] = cell;
+    }
+
+    return this;
   }
 }

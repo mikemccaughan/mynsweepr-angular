@@ -30,6 +30,6 @@ export class Scoreboard {
     }
   }
   loadScores() {
-    this.highScores = JSON.parse(window.localStorage.getItem('high-scores')) ?? {};
+    this.highScores = JSON.parse(window.localStorage.getItem('high-scores') ?? '{}') ?? {};
   }
 }

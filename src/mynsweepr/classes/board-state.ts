@@ -4,10 +4,10 @@ import { Scoreboard } from './scoreboard';
 import { ITimer, Timer } from './timer';
 
 export class BoardState {
-  difficulty?: Difficulty;
-  mineboard?: Mineboard;
-  scoreboard?: Scoreboard;
-  timer?: ITimer;
+  difficulty: Difficulty;
+  mineboard: Mineboard;
+  scoreboard: Scoreboard;
+  timer: ITimer;
   timerId?: number;
   status?: string;
   constructor() {
