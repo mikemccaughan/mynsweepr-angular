@@ -6,12 +6,13 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "module": "es2020",
+    "module": "es2022",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2022",
+    "useDefineForClassFields": false,
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -20,7 +21,15 @@
       "dom"
     ],
     "types": [],
-    "strict": true
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@mynclasses/*": [
+        "src/mynsweepr/classes/*"
+      ],
+    }
   },
   "angularCompilerOptions": {
     "strictTemplates": true

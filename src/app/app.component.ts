@@ -2,9 +2,10 @@ import { Component, HostListener } from '@angular/core';
 import { DialogService } from './@shared/components/dialog/dialog.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.sass'],
+    standalone: false
 })
 export class AppComponent {
   title = 'mynsweepr-angular';

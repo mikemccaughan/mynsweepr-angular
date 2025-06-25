@@ -1,18 +1,19 @@
 import {
   Component,
   OnInit,
-  Input,
-  Output,
-  EventEmitter,
   ElementRef,
-  HostListener
+  HostListener,
+  output,
+  input
 } from '@angular/core';
 import { DialogService } from './dialog.service';
+import { Utils } from '@mynclasses/utils';
 
 @Component({
-  selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.sass']
+    selector: 'app-dialog',
+    templateUrl: './dialog.component.html',
+    styleUrls: ['./dialog.component.sass'],
+    standalone: false
 })
 export class DialogComponent implements OnInit {
   constructor(
@@ -20,15 +21,13 @@ export class DialogComponent implements OnInit {
     public element: ElementRef
   ) { }
 
-  @Input()
-  public id: string;
-  @Input()
-  public title: string;
-  @Input()
-  public classes: { [key: string]: boolean };
+  public readonly id = input<string>();
+  public readonly title = input<string>();
+  public readonly classes = input<{
+    [key: string]: boolean;
+}>();
 
-  @Output()
-  public closed: EventEmitter<string> = new EventEmitter<string>();
+  public readonly closed = output<string>();
 
   @HostListener('keyup', ['$event'])
   private dialogKeyup(event: KeyboardEvent) {
@@ -37,26 +36,42 @@ export class DialogComponent implements OnInit {
     }
   }
 
-  private previouslyFocused: Element | null;
+  private previouslyFocused: Element | null  = null;
 
   ngOnInit() {
-    this.dialogService.register(this.id, this);
+    const id = this.id() ?? '';
+    if (!id) {
+      throw new Error('Dialog id is not defined');
+    }
+    this.dialogService.register(id, this);
   }
 
   open() {
     this.previouslyFocused = document.activeElement;
-    this.classes.show = true;
+    const classes = this.classes();
+    if (!classes) {
+      throw new Error('Dialog classes are not defined');
+    }
+    classes.show = true;
     this.element.nativeElement.querySelector('a[href],input,button,select').focus();
   }
 
   close() {
-    let wasOpen = this.classes.show;
-    this.classes.show = false;
+    const classes = this.classes();
+    if (!classes) {
+      throw new Error('Dialog classes are not defined');
+    }
+    let wasOpen = classes.show;
+    classes.show = false;
     if (this.previouslyFocused && this.previouslyFocused instanceof HTMLElement) {
       this.previouslyFocused.focus();
     }
     if (wasOpen) {
-      this.closed.emit(this.id);
+      const id = this.id() ?? '';
+      if (!Utils.isGood(id)) {
+        throw new Error('Dialog id is not defined');
+      }
+      this.closed.emit(id);
     }
   }
 }

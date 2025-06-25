@@ -5,16 +5,18 @@ import { DialogService } from '../app/@shared/components/dialog/dialog.service';
 import { DialogComponent } from '../app/@shared/components/dialog/dialog.component';
 
 @Component({
-  selector: 'app-mynsweepr',
-  templateUrl: './mynsweepr.component.html',
-  styleUrls: ['./mynsweepr.component.sass']
+    selector: 'app-mynsweepr',
+    templateUrl: './mynsweepr.component.html',
+    styleUrls: ['./mynsweepr.component.sass'],
+    standalone: false
 })
 export class MynsweeprComponent implements OnInit {
   state: BoardState = new BoardState();
 
   constructor(private mynsweeprSvc: MynsweeprService, private dialogSvc: DialogService) {
     this.dialogSvc.dialogClosed.subscribe((dialog: DialogComponent) => {
-      if (['lost','won'].includes(dialog.id)) {
+      const dialogId = dialog.id() ?? '';
+      if (['lost','won'].includes(dialogId)) {
         this.mynsweeprSvc.acknowledgedStatus(this.state);
       }
     });

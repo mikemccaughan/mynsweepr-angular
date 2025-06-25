@@ -56,4 +56,43 @@ export class Utils {
     }
     Utils.defineClass(className, cssText);
   }
+  /**
+   * Checks if a value is "good" based on its type and the provided minimum and maximum values.
+   * @param value The value to check.
+   * @param min The minimum value (minimum length when value is a string, ms since epoch when value is Date).
+   * @param max The maximum value (maximum length when value is a string, ms since epoch when value is Date).
+   * @returns True if the value is good, false otherwise.
+   */
+  static isGood(value: unknown, min: unknown = 0, max: unknown = Number.MAX_SAFE_INTEGER): boolean {
+    if (typeof value === 'undefined') {
+      return false;
+    }
+    if (value === null) {
+      return false;
+    }
+    if (typeof value === 'string') {
+      const trimmedValue = value.trim();
+      return trimmedValue.length > (min as number ?? 0) &&
+        trimmedValue.length < (max as number ?? Number.MAX_SAFE_INTEGER);
+    }
+    if (typeof value === 'number') {
+      if (isNaN(value)) {
+        return false;
+      }
+      return value >= (min as number ?? 0) && value <= (max as number ?? Number.MAX_SAFE_INTEGER);
+    }
+    if (Array.isArray(value)) {
+      if (value.length === 0) {
+        return false;
+      }
+      return value.length >= (min as number ?? 0) && value.length <= (max as number ?? Number.MAX_SAFE_INTEGER);
+    }
+    if (value instanceof Date) {
+      if (isNaN(value.valueOf())) {
+        return false;
+      }
+      return value.valueOf() >= (min as number ?? 0) && value.valueOf() <= (max as number ?? Number.MAX_SAFE_INTEGER);
+    }
+    return true; // For objects and other types, we assume they are good if they are not null or undefined.
+  }
 }

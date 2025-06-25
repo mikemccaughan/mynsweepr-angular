@@ -4,12 +4,15 @@ import { Direction } from '../classes/direction';
 import { BoardState, Minecell } from '../classes';
 
 @Component({
-  selector: 'app-minecell',
-  templateUrl: './minecell.component.html',
-  styleUrls: ['./minecell.component.sass']
+    selector: 'app-minecell',
+    templateUrl: './minecell.component.html',
+    styleUrls: ['./minecell.component.sass'],
+    standalone: false
 })
 export class MinecellComponent implements OnInit {
-  private cellField: Minecell;
+  private cellField: Minecell = new Minecell();
+  // TODO: Skipped for migration because:
+  //  Accessor inputs cannot be migrated as they are too complex.
   @Input()
   public get cell(): Minecell {
     return this.cellField;
@@ -25,10 +28,10 @@ export class MinecellComponent implements OnInit {
     }
   }
 
-  private board: BoardState;
+  private board: BoardState = new BoardState();
 
   constructor(
-    private boardSvc: MynsweeprService, 
+    private boardSvc: MynsweeprService,
     private button: ElementRef) {
     this.boardSvc.board.subscribe(board => { this.board = board; this.updateState(); });
   }

@@ -11,10 +11,18 @@ import { SharedModule } from '../app/@shared/shared.module';
 
 @NgModule({
   declarations: [
-    MynsweeprComponent, DifficultyComponent, ScoreboardComponent, MineboardComponent, MinecellComponent
+    MynsweeprComponent,
+    DifficultyComponent,
+    ScoreboardComponent,
+    MineboardComponent,
+    MinecellComponent
   ],
   exports: [
-    MynsweeprComponent, DifficultyComponent, ScoreboardComponent, MineboardComponent, MinecellComponent
+    MynsweeprComponent,
+    DifficultyComponent,
+    ScoreboardComponent,
+    MineboardComponent,
+    MinecellComponent
   ],
   imports: [
     CommonModule,

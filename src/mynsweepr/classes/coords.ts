@@ -36,7 +36,7 @@ export class Coords {
     this.xChanged = new EventEmitter<number>();
     this.yChanged = new EventEmitter<number>();
     this.coordsChanged = new EventEmitter<Coords>();
-    this.xField = x;
-    this.yField = y;
+    this.xField = x??0;
+    this.yField = y??0;
   }
 }
