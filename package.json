@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:deploy": "npx update-browserslist-db@latest && npx npm-check-updates -u && npm install && npm install -g @angular/cli && ng build --prod && cp -r ../publish/mynsweepr-angular/dist/* ../heretic-monkey.link/publish/mynsweepr-angular/",
+    "build:deploy": "npx update-browserslist-db@latest && npx npm-check-updates -u && npm install && npm install -g @angular/cli && ng build -c production && cp -r ../publish/mynsweepr-angular/dist/* ../heretic-monkey.link/publish/mynsweepr-angular/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -7,7 +7,7 @@ import {
   input
 } from '@angular/core';
 import { DialogService } from './dialog.service';
-import { Utils } from '@mynclasses/utils';
+import { Utils } from '../../../../mynsweepr/classes/utils';
 
 @Component({
     selector: 'app-dialog',
@@ -30,13 +30,13 @@ export class DialogComponent implements OnInit {
   public readonly closed = output<string>();
 
   @HostListener('keyup', ['$event'])
-  private dialogKeyup(event: KeyboardEvent) {
+  public dialogKeyup(event: KeyboardEvent) {
     if (event && event.key === 'Escape') {
       this.close();
     }
   }
 
-  private previouslyFocused: Element | null  = null;
+  public previouslyFocused: Element | null  = null;
 
   ngOnInit() {
     const id = this.id() ?? '';
