@@ -4,4 +4,8 @@
 #
 # For IE 9-11 support, please remove 'not' from the last line of the file and adjust as needed
 
-last 2 versions and not dead and not ios_saf < 15.4 and not firefox < 100 and not op_mini all and not and_uc > 0 and not and_qq > 0 and not kaios > 0
+last 2 versions and not dead and not ios_saf < 15.4 and not firefox < 100 and not op_mini all and not and_uc > 0 and not and_qq > 0 and not kaios > 0 and not android 145 and not op_mob 80 and not opera 126 and not opera 127 and not samsung 28 and not samsung 29
+
+# From Angular Build Warning:
+# Unsupported browsers:
+# android 145, op_mob 80, opera 127, opera 126, samsung 29, samsung 28
