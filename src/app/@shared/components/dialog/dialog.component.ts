@@ -7,7 +7,7 @@ import {
   input
 } from '@angular/core';
 import { DialogService } from './dialog.service';
-import { Utils } from '../../../../mynsweepr/classes/utils';
+import { Utils } from '@mynclasses/utils';
 
 @Component({
     selector: 'app-dialog',

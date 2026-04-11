@@ -5,7 +5,7 @@ nvm use lts &&
 
 touch npmi.log &&
 
-npx npm-check-updates -u &&
+npx npm-check-updates -u -x /^@angular\/.*$/ &&
 npm install &> npmi.log &&
 
 touch update-browserslist-db.log &&

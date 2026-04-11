@@ -1,0 +1,712 @@
+[33m❯[39m Building...
+[32m✔[39m Building...
+Application bundle generation failed. [18.311 seconds] - 2026-04-11T20:58:15.676Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/@shared/components/dialog/dialog.component.ts:8:7:
+[37m      8 │ } from [32m'@angular/core'[37m;
+        ╵        [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/@shared/components/dialog/dialog.component.ts:12:0:
+[37m      12 │ [32m@Component({[37m
+         ╵ [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG2003: No suitable injection token for parameter 'element' of class 'DialogComponent'.
+  Consider using the @Inject decorator to specify an injection token.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/@shared/components/dialog/dialog.component.ts:21:11:
+[37m      21 │     public [32melement[37m: ElementRef
+         ╵            [32m~~~~~~~[0m
+
+  This type does not have a value, so it cannot be used as injection token.
+
+    src/app/@shared/components/dialog/dialog.component.ts:21:20:
+[37m      21 │     public element: [32mElementRef[37m
+         ╵                     [32m~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/@shared/components/dialog/dialog.service.ts:1:41:
+[37m      1 │ import { EventEmitter, Injectable } from [32m'@angular/core'[37m;
+        ╵                                          [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/@shared/components/dialog/dialog.service.ts:4:0:
+[37m      4 │ [32m@Injectable({[37m
+        ╵ [32m~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/@shared/shared.module.ts:1:25:
+[37m      1 │ import { NgModule } from [32m'@angular/core'[37m;
+        ╵                          [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/common'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/@shared/shared.module.ts:2:29:
+[37m      2 │ import { CommonModule } from [32m'@angular/common'[37m;
+        ╵                              [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/@shared/shared.module.ts:5:0:
+[37m      5 │ [32m@NgModule({[37m
+        ╵ [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG1010: Value at position 0 in the NgModule.imports of SharedModule is not a reference
+  Value could not be determined statically.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/@shared/shared.module.ts:12:11:
+[37m      12 │   imports: [32m[[37m
+         ╵            [32m^[0m
+
+  Unknown reference.
+
+    src/app/@shared/shared.module.ts:13:4:
+[37m      13 │     [32mCommonModule[37m
+         ╵     [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app-routing.module.ts:1:25:
+[37m      1 │ import { NgModule } from [32m'@angular/core'[37m;
+        ╵                          [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/router'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app-routing.module.ts:2:37:
+[37m      2 │ import { Routes, RouterModule } from [32m'@angular/router'[37m;
+        ╵                                      [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app-routing.module.ts:7:0:
+[37m      7 │ [32m@NgModule({[37m
+        ╵ [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG1010: Value at position 0 in the NgModule.imports of AppRoutingModule is not a reference
+  Value could not be determined statically.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app-routing.module.ts:8:11:
+[37m      8 │   imports: [32m[RouterModule.forRoot(routes, {})][37m,
+        ╵            [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Unable to evaluate this expression statically.
+
+    src/app/app-routing.module.ts:8:12:
+[37m      8 │   imports: [[32mRouterModule.forRoot[37m(routes, {})],
+        ╵             [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+  Unknown reference.
+
+    src/app/app-routing.module.ts:8:12:
+[37m      8 │   imports: [[32mRouterModule[37m.forRoot(routes, {})],
+        ╵             [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8001: 'router-outlet' is not a known element:
+1. If 'router-outlet' is an Angular component, then verify that it is part of this module.
+2. If 'router-outlet' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.component.html:4:0:
+[37m      4 │ [32m<router-outlet>[37m</router-outlet>
+        ╵ [32m~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:6:17:
+[37m      6 │     templateUrl: [32m'./app.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8001: 'app-dialog' is not a known element:
+1. If 'app-dialog' is an Angular component, then verify that it is part of this module.
+2. If 'app-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.component.html:5:0:
+[37m      5 │ [32m<app-dialog [id]="'keys'" #keys [title]="'Keyboard Shortcuts'" [cla[37m...
+        ╵ [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:6:17:
+[37m      6 │     templateUrl: [32m'./app.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'classes' since it isn't a known property of 'app-dialog'.
+1. If 'app-dialog' is an Angular component and it has 'classes' input, then verify that it is part of this module.
+2. If 'app-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.component.html:5:63:
+[37m      5 │ ...'" #keys [title]="'Keyboard Shortcuts'" [32m[classes]="{ keys: true }"[37m>
+        ╵                                            [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:6:17:
+[37m      6 │     templateUrl: [32m'./app.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.component.ts:1:40:
+[37m      1 │ import { Component, HostListener } from [32m'@angular/core'[37m;
+        ╵                                         [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.component.ts:4:0:
+[37m      4 │ [32m@Component({[37m
+        ╵ [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/platform-browser'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.module.ts:1:30:
+[37m      1 │ import { BrowserModule } from [32m'@angular/platform-browser'[37m;
+        ╵                               [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.module.ts:2:25:
+[37m      2 │ import { NgModule } from [32m'@angular/core'[37m;
+        ╵                          [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/common'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.module.ts:3:29:
+[37m      3 │ import { CommonModule } from [32m'@angular/common'[37m;
+        ╵                              [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.module.ts:10:0:
+[37m      10 │ [32m@NgModule({[37m
+         ╵ [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG1010: Value at position 0 in the NgModule.imports of AppModule is not a reference
+  Value could not be determined statically.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.module.ts:14:11:
+[37m      14 │   imports: [32m[[37m
+         ╵            [32m^[0m
+
+  Unknown reference.
+
+    src/app/app.module.ts:15:4:
+[37m      15 │     [32mCommonModule[37m,
+         ╵     [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/main.ts:1:59:
+[37m      1 │ ... enableProdMode, provideZoneChangeDetection } from [32m'@angular/core'[37m;
+        ╵                                                       [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/platform-browser'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/main.ts:2:32:
+[37m      2 │ import { platformBrowser } from [32m'@angular/platform-browser'[37m;
+        ╵                                 [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'err' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/main.ts:12:9:
+[37m      12 │   .catch([32merr[37m => console.error(err));
+         ╵          [32m~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/classes/coords.ts:1:29:
+[37m      1 │ import { EventEmitter } from [32m'@angular/core'[37m;
+        ╵                              [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/classes/difficulty.ts:1:29:
+[37m      1 │ import { EventEmitter } from [32m'@angular/core'[37m;
+        ╵                              [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/classes/mineboard.ts:2:29:
+[37m      2 │ import { EventEmitter } from [32m'@angular/core'[37m;
+        ╵                              [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/classes/minecell.ts:1:29:
+[37m      1 │ import { EventEmitter } from [32m'@angular/core'[37m;
+        ╵                              [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/classes/scoreboard.ts:2:29:
+[37m      2 │ import { EventEmitter } from [32m'@angular/core'[37m;
+        ╵                              [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/classes/timer.ts:1:27:
+[37m      1 │ import { Injectable } from [32m'@angular/core'[37m;
+        ╵                            [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module 'rxjs'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/classes/timer.ts:2:44:
+[37m      2 │ import { BehaviorSubject, Observable } from [32m'rxjs'[37m;
+        ╵                                             [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/classes/timer.ts:12:0:
+[37m      12 │ [32m@Injectable({[37m
+         ╵ [32m~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/difficulty/difficulty.component.ts:1:41:
+[37m      1 │ import { Component, OnInit, Input } from [32m'@angular/core'[37m;
+        ╵                                          [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/difficulty/difficulty.component.ts:5:0:
+[37m      5 │ [32m@Component({[37m
+        ╵ [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'board' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/difficulty/difficulty.component.ts:20:34:
+[37m      20 │     this.boardSvc.board.subscribe([32mboard[37m => {
+         ╵                                   [32m~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8001: 'app-minecell' is not a known element:
+1. If 'app-minecell' is an Angular component, then verify that it is part of this module.
+2. If 'app-minecell' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mineboard/mineboard.component.html:2:43:
+[37m      2 │ ...; track cell.index) { [32m<app-minecell [cell]="cell">[37m</app-minecell> }
+        ╵                          [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MineboardComponent.
+
+    src/mynsweepr/mineboard/mineboard.component.ts:8:17:
+[37m      8 │     templateUrl: [32m'./mineboard.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'cell' since it isn't a known property of 'app-minecell'.
+1. If 'app-minecell' is an Angular component and it has 'cell' input, then verify that it is part of this module.
+2. If 'app-minecell' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mineboard/mineboard.component.html:2:57:
+[37m      2 │ ...; track cell.index) { <app-minecell [32m[cell]="cell"[37m></app-minecell> }
+        ╵                                        [32m~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MineboardComponent.
+
+    src/mynsweepr/mineboard/mineboard.component.ts:8:17:
+[37m      8 │     templateUrl: [32m'./mineboard.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mineboard/mineboard.component.ts:1:41:
+[37m      1 │ import { Component, OnInit, input } from [32m'@angular/core'[37m;
+        ╵                                          [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '../classes'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mineboard/mineboard.component.ts:2:48:
+[37m      2 │ import { Minecell, Mineboard, BoardState } from [32m'../classes'[37m;
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mineboard/mineboard.component.ts:6:0:
+[37m      6 │ [32m@Component({[37m
+        ╵ [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'board' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mineboard/mineboard.component.ts:43:34:
+[37m      43 │     this.boardSvc.board.subscribe([32mboard[37m => this.board = board);
+         ╵                                   [32m~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/minecell/minecell.component.ts:1:53:
+[37m      1 │ import { Component, OnInit, Input, ElementRef } from [32m'@angular/core'[37m;
+        ╵                                                      [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/minecell/minecell.component.ts:5:0:
+[37m      5 │ [32m@Component({[37m
+        ╵ [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG2003: No suitable injection token for parameter 'button' of class 'MinecellComponent'.
+  Consider using the @Inject decorator to specify an injection token.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/minecell/minecell.component.ts:34:12:
+[37m      34 │     private [32mbutton[37m: ElementRef
+         ╵             [32m~~~~~~[0m
+
+  This type does not have a value, so it cannot be used as injection token.
+
+    src/mynsweepr/minecell/minecell.component.ts:34:20:
+[37m      34 │     private button: [32mElementRef[37m
+         ╵                     [32m~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'board' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/minecell/minecell.component.ts:36:34:
+[37m      36 │ ...his.boardSvc.board.subscribe([32mboard[37m => { this.board = board; thi...
+         ╵                                 [32m~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr-routing.module.ts:1:25:
+[37m      1 │ import { NgModule } from [32m'@angular/core'[37m;
+        ╵                          [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/router'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr-routing.module.ts:2:37:
+[37m      2 │ import { Routes, RouterModule } from [32m'@angular/router'[37m;
+        ╵                                      [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr-routing.module.ts:13:0:
+[37m      13 │ [32m@NgModule({[37m
+         ╵ [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG1010: Value at position 0 in the NgModule.imports of MynsweeprRoutingModule is not a reference
+  Value could not be determined statically.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr-routing.module.ts:14:11:
+[37m      14 │   imports: [32m[[37m
+         ╵            [32m^[0m
+
+  Unable to evaluate this expression statically.
+
+    src/mynsweepr/mynsweepr-routing.module.ts:15:4:
+[37m      15 │     [32mRouterModule.forChild[37m(mynsweeprRoutes)
+         ╵     [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Unknown reference.
+
+    src/mynsweepr/mynsweepr-routing.module.ts:15:4:
+[37m      15 │     [32mRouterModule[37m.forChild(mynsweeprRoutes)
+         ╵     [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8001: 'app-difficulty' is not a known element:
+1. If 'app-difficulty' is an Angular component, then verify that it is part of this module.
+2. If 'app-difficulty' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.html:2:2:
+[37m      2 │   [32m<app-difficulty [difficulty]="state.difficulty">[37m</app-difficulty>
+        ╵   [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MynsweeprComponent.
+
+    src/mynsweepr/mynsweepr.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./mynsweepr.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'difficulty' since it isn't a known property of 'app-difficulty'.
+1. If 'app-difficulty' is an Angular component and it has 'difficulty' input, then verify that it is part of this module.
+2. If 'app-difficulty' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.html:2:18:
+[37m      2 │   <app-difficulty [32m[difficulty]="state.difficulty"[37m></app-difficulty>
+        ╵                   [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MynsweeprComponent.
+
+    src/mynsweepr/mynsweepr.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./mynsweepr.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8001: 'app-scoreboard' is not a known element:
+1. If 'app-scoreboard' is an Angular component, then verify that it is part of this module.
+2. If 'app-scoreboard' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.html:3:2:
+[37m      3 │   [32m<app-scoreboard [scoreboard]="state.scoreboard">[37m</app-scoreboard>
+        ╵   [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MynsweeprComponent.
+
+    src/mynsweepr/mynsweepr.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./mynsweepr.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'scoreboard' since it isn't a known property of 'app-scoreboard'.
+1. If 'app-scoreboard' is an Angular component and it has 'scoreboard' input, then verify that it is part of this module.
+2. If 'app-scoreboard' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.html:3:18:
+[37m      3 │   <app-scoreboard [32m[scoreboard]="state.scoreboard"[37m></app-scoreboard>
+        ╵                   [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MynsweeprComponent.
+
+    src/mynsweepr/mynsweepr.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./mynsweepr.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8001: 'app-mineboard' is not a known element:
+1. If 'app-mineboard' is an Angular component, then verify that it is part of this module.
+2. If 'app-mineboard' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.html:4:2:
+[37m      4 │   [32m<app-mineboard [mineboard]="state.mineboard">[37m</app-mineboard>
+        ╵   [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MynsweeprComponent.
+
+    src/mynsweepr/mynsweepr.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./mynsweepr.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'mineboard' since it isn't a known property of 'app-mineboard'.
+1. If 'app-mineboard' is an Angular component and it has 'mineboard' input, then verify that it is part of this module.
+2. If 'app-mineboard' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.html:4:17:
+[37m      4 │   <app-mineboard [32m[mineboard]="state.mineboard"[37m></app-mineboard>
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MynsweeprComponent.
+
+    src/mynsweepr/mynsweepr.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./mynsweepr.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8001: 'app-dialog' is not a known element:
+1. If 'app-dialog' is an Angular component, then verify that it is part of this module.
+2. If 'app-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.html:6:0:
+[37m      6 │ [32m<app-dialog [id]="'won'" [title]="'You won!'" [classes]="{ won: tru[37m...
+        ╵ [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MynsweeprComponent.
+
+    src/mynsweepr/mynsweepr.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./mynsweepr.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'classes' since it isn't a known property of 'app-dialog'.
+1. If 'app-dialog' is an Angular component and it has 'classes' input, then verify that it is part of this module.
+2. If 'app-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.html:6:46:
+[37m      6 │ ...dialog [id]="'won'" [title]="'You won!'" [32m[classes]="{ won: true }"[37m>
+        ╵                                             [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MynsweeprComponent.
+
+    src/mynsweepr/mynsweepr.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./mynsweepr.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8001: 'app-dialog' is not a known element:
+1. If 'app-dialog' is an Angular component, then verify that it is part of this module.
+2. If 'app-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.html:18:0:
+[37m      18 │ [32m<app-dialog [id]="'lost'" [title]="'You lost!'" [classes]="{ lost:[37m...
+         ╵ [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MynsweeprComponent.
+
+    src/mynsweepr/mynsweepr.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./mynsweepr.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'classes' since it isn't a known property of 'app-dialog'.
+1. If 'app-dialog' is an Angular component and it has 'classes' input, then verify that it is part of this module.
+2. If 'app-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.html:18:48:
+[37m      18 │ ...og [id]="'lost'" [title]="'You lost!'" [32m[classes]="{ lost: true }"[37m>
+         ╵                                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MynsweeprComponent.
+
+    src/mynsweepr/mynsweepr.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./mynsweepr.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.ts:1:34:
+[37m      1 │ import { Component, OnInit } from [32m'@angular/core'[37m;
+        ╵                                   [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.ts:7:0:
+[37m      7 │ [32m@Component({[37m
+        ╵ [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'state' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.component.ts:23:38:
+[37m      23 │     this.mynsweeprSvc.board.subscribe([32mstate[37m => {
+         ╵                                       [32m~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.module.ts:1:25:
+[37m      1 │ import { NgModule } from [32m'@angular/core'[37m;
+        ╵                          [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/common'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.module.ts:2:29:
+[37m      2 │ import { CommonModule } from [32m'@angular/common'[37m;
+        ╵                              [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/forms'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.module.ts:3:28:
+[37m      3 │ import { FormsModule } from [32m'@angular/forms'[37m;
+        ╵                             [32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.module.ts:13:0:
+[37m      13 │ [32m@NgModule({[37m
+         ╵ [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG1010: Value at position 0 in the NgModule.imports of MynsweeprModule is not a reference
+  Value could not be determined statically.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.module.ts:28:11:
+[37m      28 │   imports: [32m[[37m
+         ╵            [32m^[0m
+
+  Unknown reference.
+
+    src/mynsweepr/mynsweepr.module.ts:29:4:
+[37m      29 │     [32mCommonModule[37m,
+         ╵     [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.service.ts:1:27:
+[37m      1 │ import { Injectable } from [32m'@angular/core'[37m;
+        ╵                            [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module 'rxjs'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.service.ts:2:60:
+[37m      2 │ import { BehaviorSubject, firstValueFrom, Observable } from [32m'rxjs'[37m;
+        ╵                                                             [32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/mynsweepr.service.ts:12:0:
+[37m      12 │ [32m@Injectable({[37m
+         ╵ [32m~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2792: Cannot find module '@angular/core'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/scoreboard/scoreboard.component.ts:1:41:
+[37m      1 │ import { Component, OnInit, input } from [32m'@angular/core'[37m;
+        ╵                                          [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2354: This syntax requires an imported helper but module 'tslib' cannot be found.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/mynsweepr/scoreboard/scoreboard.component.ts:5:0:
+[37m      5 │ [32m@Component({[37m
+        ╵ [32m~~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31mAn unhandled exception occurred: Output path MUST not be project root directory!
+See "C:\Users\ms\AppData\Local\Temp\ng-9OYCQJ\angular-errors.log" for further details.[39m[22m

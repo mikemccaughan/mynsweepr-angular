@@ -20,7 +20,7 @@
             "aot": true,
             "baseHref": "/mynsweepr-angular/dist",
             "outputPath": {
-              "base": "../publish/mynsweepr-angular/dist"
+              "base": ""
             },
             "index": "src/index.html",
             "polyfills": [

@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { BoardState } from './classes/board-state';
-import { BehaviorSubject, first, firstValueFrom, Observable } from 'rxjs';
-import { Direction } from './classes/direction';
-import { Minecell } from './classes';
-import { Coords } from './classes/coords';
+import { BehaviorSubject, firstValueFrom, Observable } from 'rxjs';
+
+import { BoardState } from '@mynclasses/board-state';
+import { Direction } from '@mynclasses/direction';
+import { Minecell } from '@mynclasses/index';
+import { Coords } from '@mynclasses/coords';
 
 /**
  * Provides methods to manage the game state of Mynsweepr.
@@ -43,7 +44,7 @@ export class MynsweeprService {
     board.mineboard.activeCoords.y = y;
     const cell = board.mineboard.getCell(x, y);
     if (cell) {
-      board.mineboard.cells.forEach(cel => cel.isActive = false);
+      board.mineboard.cells.filter(cel => cel.index !== cell.index).forEach(cel => cel.isActive = false);
       cell.isActive = true;
       this.setBoard(board);
     }
@@ -112,7 +113,6 @@ export class MynsweeprService {
       return;
     }
     this.setActiveCell(board, cell.x, cell.y);
-    this.setBoard(board);
   }
 
   /**

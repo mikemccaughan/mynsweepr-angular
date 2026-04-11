@@ -1,5 +1,5 @@
 import { Component, OnInit, input } from '@angular/core';
-import { BoardState, Scoreboard } from '../classes';
+import { BoardState, Scoreboard } from '@mynclasses/index';
 import { MynsweeprService } from '../mynsweepr.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class ScoreboardComponent implements OnInit {
   private board: BoardState = new BoardState();
 
   constructor(private boardSvc: MynsweeprService) {
-    this.boardSvc.board.subscribe(board => {
+    this.boardSvc.board.subscribe((board: BoardState) => {
       this.board = board;
       this.highscore = this.board.scoreboard.highScore;
     });

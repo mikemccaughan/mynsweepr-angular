@@ -18,7 +18,7 @@ export class DialogService {
       throw new Error("id must be provided to the DialogService's register method");
     }
     if (component == null || !(component instanceof DialogComponent)) {
-      throw new Error("component of type DialogComponentmust be provided to the DialogService's register method");
+      throw new Error("component of type DialogComponent must be provided to the DialogService's register method");
     }
     this.components[id] = component;
     this.components[id].closed.subscribe((closedId: string) => {

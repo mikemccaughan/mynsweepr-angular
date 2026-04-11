@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MynsweeprService } from './mynsweepr.service';
-import { BoardState } from './classes/board-state';
+import { BoardState } from '@mynclasses/board-state';
 import { DialogService } from '../app/@shared/components/dialog/dialog.service';
 import { DialogComponent } from '../app/@shared/components/dialog/dialog.component';
 

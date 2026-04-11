@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import { MynsweeprService } from '../mynsweepr.service';
-import { Direction } from '../classes/direction';
-import { BoardState, Minecell } from '../classes';
+import { BoardState, Direction, Minecell } from '@mynclasses/index';
 
 @Component({
     selector: 'app-minecell',
@@ -32,7 +31,8 @@ export class MinecellComponent implements OnInit {
 
   constructor(
     private boardSvc: MynsweeprService,
-    private button: ElementRef) {
+    private button: ElementRef
+  ) {
     this.boardSvc.board.subscribe(board => { this.board = board; this.updateState(); });
   }
 
