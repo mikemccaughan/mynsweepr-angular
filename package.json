@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:deploy": "bash build-deploy.sh &> build-deploy.log && cat build-deploy.log && rm build-deploy.log",
+    "build:deploy": "bash build-deploy.sh",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -32,16 +32,16 @@
     "@angular/language-service": "^21.2.8",
     "@types/jasmine": "^6.0.0",
     "@types/jasminewd2": "^2.0.13",
-    "@types/node": "^25.5.2",
+    "@types/node": "^25.6.0",
     "eslint": "^10.2.0",
-    "jasmine-core": "^6.1.0",
+    "jasmine-core": "^6.2.0",
     "jasmine-spec-reporter": "^7.0.0",
     "karma": "^6.4.4",
     "karma-chrome-launcher": "^3.2.0",
     "karma-coverage-istanbul-reporter": "^3.0.3",
     "karma-jasmine": "^5.1.0",
     "karma-jasmine-html-reporter": "^2.2.0",
-    "npm-check-updates": "^20.0.0",
+    "npm-check-updates": "^20.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
