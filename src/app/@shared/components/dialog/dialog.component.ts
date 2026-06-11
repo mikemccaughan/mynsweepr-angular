@@ -4,7 +4,8 @@ import {
   ElementRef,
   HostListener,
   output,
-  input
+  input,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { DialogService } from './dialog.service';
 import { Utils } from '../../../../mynsweepr/classes/utils';
@@ -13,6 +14,7 @@ import { Utils } from '../../../../mynsweepr/classes/utils';
     selector: 'app-dialog',
     templateUrl: './dialog.component.html',
     styleUrls: ['./dialog.component.sass'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DialogComponent implements OnInit {

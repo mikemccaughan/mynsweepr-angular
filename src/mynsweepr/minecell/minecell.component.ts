@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { MynsweeprService } from '../mynsweepr.service';
 import { Direction } from '../classes/direction';
 import { BoardState, Minecell } from '../classes';
@@ -7,6 +7,7 @@ import { BoardState, Minecell } from '../classes';
     selector: 'app-minecell',
     templateUrl: './minecell.component.html',
     styleUrls: ['./minecell.component.sass'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class MinecellComponent implements OnInit {

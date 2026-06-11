@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { BoardState, Difficulty } from '../classes';
 import { MynsweeprService } from '../mynsweepr.service';
 
@@ -6,6 +6,7 @@ import { MynsweeprService } from '../mynsweepr.service';
     selector: 'app-difficulty',
     templateUrl: './difficulty.component.html',
     styleUrls: ['./difficulty.component.sass'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DifficultyComponent implements OnInit {

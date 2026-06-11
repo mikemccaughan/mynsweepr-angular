@@ -1,4 +1,4 @@
-import { Component, OnInit, input } from '@angular/core';
+import { Component, OnInit, input, ChangeDetectionStrategy } from '@angular/core';
 import { BoardState, Scoreboard } from '../classes';
 import { MynsweeprService } from '../mynsweepr.service';
 
@@ -6,6 +6,7 @@ import { MynsweeprService } from '../mynsweepr.service';
     selector: 'app-scoreboard',
     templateUrl: './scoreboard.component.html',
     styleUrls: ['./scoreboard.component.sass'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ScoreboardComponent implements OnInit {

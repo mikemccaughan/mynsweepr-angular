@@ -1,4 +1,4 @@
-import { Component, OnInit, input } from '@angular/core';
+import { Component, OnInit, input, ChangeDetectionStrategy } from '@angular/core';
 import { Minecell, Mineboard, BoardState } from '../classes';
 import { MynsweeprService } from '../mynsweepr.service';
 import { Utils } from '../classes/utils';
@@ -7,6 +7,7 @@ import { Utils } from '../classes/utils';
     selector: 'app-mineboard',
     templateUrl: './mineboard.component.html',
     styleUrls: ['./mineboard.component.sass'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class MineboardComponent implements OnInit {

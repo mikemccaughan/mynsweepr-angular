@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { MynsweeprService } from './mynsweepr.service';
 import { BoardState } from './classes/board-state';
 import { DialogService } from '../app/@shared/components/dialog/dialog.service';
@@ -8,6 +8,7 @@ import { DialogComponent } from '../app/@shared/components/dialog/dialog.compone
     selector: 'app-mynsweepr',
     templateUrl: './mynsweepr.component.html',
     styleUrls: ['./mynsweepr.component.sass'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class MynsweeprComponent implements OnInit {
