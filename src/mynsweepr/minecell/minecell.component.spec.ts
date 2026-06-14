@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { MinecellComponent } from './minecell.component';
+import { MinecellComponent } from './minecell.component.js';
 
 describe('MinecellComponent', () => {
   let component: MinecellComponent;

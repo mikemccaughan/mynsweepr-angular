@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { MynsweeprComponent } from './mynsweepr.component';
+import { MynsweeprComponent } from './mynsweepr.component.js';
 
 describe('MynsweeprComponent', () => {
   let component: MynsweeprComponent;

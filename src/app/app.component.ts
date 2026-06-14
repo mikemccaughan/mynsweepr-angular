@@ -1,5 +1,5 @@
 import { Component, HostListener, ChangeDetectionStrategy } from '@angular/core';
-import { DialogService } from './@shared/components/dialog/dialog.service';
+import { DialogService } from './@shared/components/dialog/dialog.service.js';
 
 @Component({
     selector: 'app-root',

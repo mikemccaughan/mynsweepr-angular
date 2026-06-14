@@ -1,8 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { MynsweeprService } from './mynsweepr.service';
-import { BoardState } from './classes/board-state';
-import { DialogService } from '../app/@shared/components/dialog/dialog.service';
-import { DialogComponent } from '../app/@shared/components/dialog/dialog.component';
+import { MynsweeprService } from './mynsweepr.service.js';
+import { BoardState } from '@mynclasses/board-state.js';
+import { DialogService } from '@dialog/dialog.service.js';
+import { DialogComponent } from '@dialog/dialog.component.js';
 
 @Component({
     selector: 'app-mynsweepr',
@@ -21,7 +21,7 @@ export class MynsweeprComponent implements OnInit {
         this.mynsweeprSvc.acknowledgedStatus(this.state);
       }
     });
-    this.mynsweeprSvc.board.subscribe(state => {
+    this.mynsweeprSvc.board.subscribe((state: BoardState) => {
       this.state = state;
       if (state.status) {
         switch (state.status) {

@@ -1,7 +1,7 @@
 import { Component, OnInit, input, ChangeDetectionStrategy } from '@angular/core';
-import { Minecell, Mineboard, BoardState } from '../classes';
-import { MynsweeprService } from '../mynsweepr.service';
-import { Utils } from '../classes/utils';
+import { Minecell, Mineboard, BoardState } from '../classes/index.js';
+import { MynsweeprService } from '../mynsweepr.service.js';
+import { Utils } from '../classes/utils.js';
 
 @Component({
     selector: 'app-mineboard',
@@ -26,7 +26,7 @@ export class MineboardComponent implements OnInit {
       'type-30': false
     };
     const mineboard = this.mineboard();
-    if (mineboard && mineboard.difficulty && mineboard.difficulty.type) {
+    if (Utils.isGood(mineboard.difficulty.type, 1, 3)) {
       classes[`type-${mineboard.difficulty.type}`] = true;
       if (mineboard.difficulty.type === '?' && mineboard.difficulty.width) {
         // Adds a rule with selector .type-? with property grid-template-columns set to repeat(<width>, min-content).
@@ -41,7 +41,7 @@ export class MineboardComponent implements OnInit {
   }
 
   constructor(private boardSvc: MynsweeprService) {
-    this.boardSvc.board.subscribe(board => this.board = board);
+    this.boardSvc.board.subscribe((board: BoardState) => this.board = board);
   }
 
   ngOnInit() {

@@ -7,8 +7,8 @@ import {
   input,
   ChangeDetectionStrategy
 } from '@angular/core';
-import { DialogService } from './dialog.service';
-import { Utils } from '../../../../mynsweepr/classes/utils';
+import { DialogService } from './dialog.service.js';
+import { Utils } from '@mynclasses/utils.js';
 
 @Component({
     selector: 'app-dialog',

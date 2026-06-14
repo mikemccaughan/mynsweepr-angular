@@ -1,4 +1,4 @@
-import { Timer } from './timer';
+import { Timer } from './timer.js';
 
 describe('Timer', () => {
   it('should create an instance', () => {

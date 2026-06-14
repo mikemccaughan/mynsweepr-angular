@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, ElementRef, ChangeDetectionStrategy } from '@angular/core';
-import { MynsweeprService } from '../mynsweepr.service';
-import { Direction } from '../classes/direction';
-import { BoardState, Minecell } from '../classes';
+import { MynsweeprService } from '../mynsweepr.service.js';
+import { BoardState, Direction, Minecell } from '@mynclasses/index.js';
 
 @Component({
     selector: 'app-minecell',
@@ -12,8 +11,7 @@ import { BoardState, Minecell } from '../classes';
 })
 export class MinecellComponent implements OnInit {
   private cellField: Minecell = new Minecell();
-  // TODO: Skipped for migration because:
-  //  Accessor inputs cannot be migrated as they are too complex.
+
   @Input()
   public get cell(): Minecell {
     return this.cellField;
@@ -30,11 +28,16 @@ export class MinecellComponent implements OnInit {
   }
 
   private board: BoardState = new BoardState();
+  private needToUpdateState: boolean = true;
 
   constructor(
     private boardSvc: MynsweeprService,
-    private button: ElementRef) {
-    this.boardSvc.board.subscribe(board => { this.board = board; this.updateState(); });
+    private button: ElementRef
+  ) {
+    this.boardSvc.board.subscribe((board: BoardState) => { 
+      this.board = board; 
+      this.needToUpdateState && this.updateState(); 
+    });
   }
 
   ngOnInit() {
@@ -42,29 +45,33 @@ export class MinecellComponent implements OnInit {
 
   updateState() {
     // get currrent cell
-    if (this.cell) {
+    if (this.cell && this.board?.mineboard?.activeCoords && this.boardSvc) {
       if (this.board.mineboard.activeCoords.x === this.cell.x &&
         this.board.mineboard.activeCoords.y === this.cell.y &&
         !this.cell.isActive) {
         this.boardSvc.activateCell(this.board, this.cell);
       }
     }
+    this.needToUpdateState = false;
   }
 
   cellClick(event: MouseEvent, cell: Minecell) {
     event.preventDefault();
+    this.needToUpdateState = true;
     this.boardSvc.activateCell(this.board, cell);
     this.boardSvc.showCell(this.board, cell);
   }
 
   cellDblClick(event: MouseEvent, cell: Minecell) {
     event.preventDefault();
+    this.needToUpdateState = true;
     this.boardSvc.activateCell(this.board, cell);
     this.boardSvc.showSurroundingCells(this.board, cell);
   }
 
   cellRightClick(event: MouseEvent, cell: Minecell) {
     event.preventDefault();
+    this.needToUpdateState = true;
     this.boardSvc.activateCell(this.board, cell);
     if (cell.isHidden) {
       this.boardSvc.flagCell(this.board, cell);
@@ -73,6 +80,7 @@ export class MinecellComponent implements OnInit {
 
   cellKeyup(event: KeyboardEvent, cell: Minecell) {
     event.preventDefault();
+    this.needToUpdateState = true;
     this.boardSvc.activateCell(this.board, cell);
     switch (event.key) {
       case ' ':
@@ -128,5 +136,6 @@ export class MinecellComponent implements OnInit {
         this.boardSvc.moveActiveCell(this.board, Direction.Down);
         break;
     }
+    this.needToUpdateState = true;
   }
 }

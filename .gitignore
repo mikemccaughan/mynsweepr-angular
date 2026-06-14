@@ -47,3 +47,7 @@ Thumbs.db
 
 # Angular build files
 .angular
+build-deploy.log
+ng-build.log
+npmi.log
+update-browserslist-db.log

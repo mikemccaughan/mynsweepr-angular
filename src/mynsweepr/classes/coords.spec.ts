@@ -1,4 +1,4 @@
-import { Coords } from './coords';
+import { Coords } from './coords.js';
 
 describe('Coords', () => {
   it('should create an instance', () => {

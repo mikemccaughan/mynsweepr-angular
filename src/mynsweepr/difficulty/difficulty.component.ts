@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
-import { BoardState, Difficulty } from '../classes';
-import { MynsweeprService } from '../mynsweepr.service';
+import { BoardState, Difficulty } from '../classes/index.js';
+import { MynsweeprService } from '../mynsweepr.service.js';
 
 @Component({
     selector: 'app-difficulty',
@@ -18,7 +18,10 @@ export class DifficultyComponent implements OnInit {
   private board: BoardState = new BoardState();
 
   constructor(private boardSvc: MynsweeprService) {
-    this.boardSvc.board.subscribe(board => this.board = board);
+    this.boardSvc.board.subscribe((board: BoardState) => {
+      this.board = board;
+      this.difficulty = board.difficulty;
+    });
   }
 
   ngOnInit() {

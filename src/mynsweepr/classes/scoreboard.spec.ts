@@ -1,4 +1,4 @@
-import { Scoreboard } from './scoreboard';
+import { Scoreboard } from './scoreboard.js';
 
 describe('Scoreboard', () => {
   it('should create an instance', () => {

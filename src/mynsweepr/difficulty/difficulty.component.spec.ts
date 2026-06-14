@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { DifficultyComponent } from './difficulty.component';
+import { DifficultyComponent } from './difficulty.component.js';
 
 describe('DifficultyComponent', () => {
   let component: DifficultyComponent;
