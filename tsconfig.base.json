@@ -1,13 +1,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "downlevelIteration": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "module": "es2022",
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
