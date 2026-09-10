@@ -1,6 +1,6 @@
 #!/bin/bash
-cd ~/Source/Repos/mynsweepr-angular &&
-nvm install lts --latest-npm &&
+cd ~/Source/Repnos/mynsweepr-angular &&
+nvm install lts &&
 nvm use lts &&
 
 touch npmi.log &&
