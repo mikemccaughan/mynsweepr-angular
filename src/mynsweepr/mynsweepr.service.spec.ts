@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MynsweeprService } from './mynsweepr.service';
+import { MynsweeprService } from './mynsweepr.service.js';
 
 describe('MynsweeprService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

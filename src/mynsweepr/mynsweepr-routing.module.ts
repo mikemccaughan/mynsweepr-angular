@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MynsweeprComponent } from './mynsweepr.component';
+import { MynsweeprComponent } from './mynsweepr.component.js';
 
 const mynsweeprRoutes: Routes = [
   {

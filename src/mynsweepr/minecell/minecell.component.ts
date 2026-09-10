@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { MynsweeprService } from '../mynsweepr.service.js';
-import { BoardState, Direction, Minecell } from '@mynclasses/index.js';
+import { BoardState, Direction, Minecell } from '../classes/index.js';
 
 @Component({
     selector: 'app-minecell',

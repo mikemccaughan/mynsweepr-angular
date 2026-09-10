@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, firstValueFrom, Observable } from 'rxjs';
 
-import { BoardState } from '@mynclasses/board-state.js';
-import { Direction } from '@mynclasses/direction.js';
-import { Minecell } from '@mynclasses/index.js';
-import { Coords } from '@mynclasses/coords.js';
+import { BoardState, Coords, Direction, Minecell } from '../mynsweepr/classes/index.js';
 
 /**
  * Provides methods to manage the game state of Mynsweepr.
@@ -146,7 +143,7 @@ export class MynsweeprService {
   }
 
   async checkForWin(board: BoardState): Promise<void> {
-    if (board.mineboard.cells.every(cell => cell.isAFlaggedMine || cell.isDisplayedAndNotAMine)) {
+    if (board.mineboard.cells.every((cell: Minecell) => cell.isAFlaggedMine || cell.isDisplayedAndNotAMine)) {
       board.status = 'won';
       if (await firstValueFrom(board.timer.running) === true) {
         board.timer.stop(board.timerId!);
@@ -157,7 +154,7 @@ export class MynsweeprService {
   }
 
   async epicFail(board: BoardState): Promise<void> {
-    board.mineboard.cells.filter(cell => cell.isHidden).forEach(cell => cell.isHidden = false);
+    board.mineboard.cells.filter((cell: Minecell) => cell.isHidden).forEach((cell: Minecell) => cell.isHidden = false);
     board.status = 'lost';
     if (await firstValueFrom(board.timer.running) === true) {
       board.timer.stop(board.timerId!);

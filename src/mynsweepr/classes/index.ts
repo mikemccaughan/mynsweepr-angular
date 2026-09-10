@@ -1,9 +1,9 @@
-export { BoardState } from './board-state';
-export { Difficulty } from './difficulty';
-export { Mineboard } from './mineboard';
-export { Minecell } from './minecell';
-export { Scoreboard } from './scoreboard';
-export { ITimer, Timer } from './timer';
-export { Coords } from './coords';
-export { Direction } from './direction';
-export { Utils } from './utils';
+export { BoardState } from './board-state.js';
+export { Difficulty } from './difficulty.js';
+export { Mineboard } from './mineboard.js';
+export { Minecell } from './minecell.js';
+export { Scoreboard } from './scoreboard.js';
+export { ITimer, Timer } from './timer.js';
+export { Coords } from './coords.js';
+export { Direction } from './direction.js';
+export { Utils } from './utils.js';

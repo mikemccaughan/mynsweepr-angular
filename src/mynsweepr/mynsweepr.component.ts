@@ -1,8 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { MynsweeprService } from './mynsweepr.service.js';
-import { BoardState } from '@mynclasses/board-state.js';
-import { DialogService } from '@dialog/dialog.service.js';
-import { DialogComponent } from '@dialog/dialog.component.js';
+import { BoardState } from '../mynsweepr/classes/index.js';
+import { DialogComponent, DialogService } from '../app/@shared/components/dialog/index.js';
 
 @Component({
     selector: 'app-mynsweepr',

@@ -1,4 +1,4 @@
-import { Minecell } from './minecell.js';
+import { Minecell } from './index.js';
 
 describe('Minecell', () => {
   it('should create an instance', () => {

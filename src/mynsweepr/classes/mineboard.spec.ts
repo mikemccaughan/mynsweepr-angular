@@ -1,4 +1,4 @@
-import { Mineboard } from './mineboard.js';
+import { Mineboard } from './index.js';
 
 describe('Mineboard', () => {
   it('should create an instance', () => {

@@ -1,6 +1,6 @@
-import { Component, OnInit, input, ChangeDetectionStrategy } from '@angular/core';
-import { BoardState, Scoreboard } from '../classes';
-import { MynsweeprService } from '../mynsweepr.service';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
+import { BoardState, Scoreboard } from '../classes/index.js';
+import { MynsweeprService } from '../mynsweepr.service.js';
 
 @Component({
     selector: 'app-scoreboard',
@@ -9,7 +9,7 @@ import { MynsweeprService } from '../mynsweepr.service';
     changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
-export class ScoreboardComponent implements OnInit {
+export class ScoreboardComponent {
   public readonly scoreboard = input<Scoreboard>();
   public highscore: string = '00:00:00';
   private board: BoardState = new BoardState();
@@ -20,8 +20,4 @@ export class ScoreboardComponent implements OnInit {
       this.highscore = this.board.scoreboard.highScore;
     });
   }
-
-  ngOnInit() {
-  }
-
 }

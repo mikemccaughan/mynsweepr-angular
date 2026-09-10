@@ -1,4 +1,4 @@
-import { Difficulty } from './difficulty';
+import { Difficulty } from './index.js';
 import { EventEmitter } from '@angular/core';
 
 export class Scoreboard {

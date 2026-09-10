@@ -1,7 +1,5 @@
-import { Minecell } from './minecell.js';
 import { EventEmitter } from '@angular/core';
-import { Difficulty } from './difficulty.js';
-import { Coords } from './coords.js';
+import { Coords, Difficulty, Minecell } from './index.js';
 
 export class Mineboard {
   remainingChanged: EventEmitter<number>;

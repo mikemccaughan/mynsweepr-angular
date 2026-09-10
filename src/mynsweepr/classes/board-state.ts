@@ -1,7 +1,4 @@
-import { Difficulty } from './difficulty.js';
-import { Mineboard } from './mineboard.js';
-import { Scoreboard } from './scoreboard.js';
-import { ITimer, Timer } from './timer.js';
+import { Difficulty, Mineboard, Scoreboard, ITimer, Timer } from './index.js';
 
 /**
  *  Represents the state of the Minesweeper game board.

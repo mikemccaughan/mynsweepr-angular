@@ -5,13 +5,13 @@ nvm use lts &&
 
 touch npmi.log &&
 
-npx npm-check-updates -u -x /^@angular\/.*$/ &&
-npm install &> npmi.log &&
+npx npm-check-updates -u -x /^@angular\/.*$/ /^typescript$/ &&
+npm install > npmi.log &&
 
 touch update-browserslist-db.log &&
 
-npx update-browserslist-db@latest &> update-browserslist-db.log
-if $(grep -q "ErrorL Command failed:" "update-browserslist-db.log"); then
+npx update-browserslist-db@latest > update-browserslist-db.log
+if $(grep -q "ErrorL Command failed:" "update-browserslist-db.l"); then
   echo "Error updating browserslist database. Trying again..." &&
   npx update-browserslist-db@latest &> update-browserslist-db.log
 else
@@ -21,7 +21,7 @@ fi
 if $(grep -q "high severity vulnerabilities" "npmi.log") | $(grep -q "Fix the upstream dependency conflict" "npmi.log"); then
   echo "High severity vulnerabilities or dependency conflicts found. Please review npmi.log for details. Running npm audit fix..." &&
   npm audit fix --force &&
-  npm install --force &> npmi.log
+  npm install --force > npmi.log
   if $(grep -q "high severity vulnerabilities" "npmi.log"); then
     echo "High severity vulnerabilities still found after npm audit fix. Please review npmi.log for details." &&
     exit 1
@@ -34,6 +34,6 @@ fi
 
 touch ng-build.log &&
 
-ng build -c production &> ng-build.log &&
+ng build -c production > ng-build.log &&
 
 cp -r ~/Source/Repos/publish/mynsweepr-angular/dist/* ~/Source/Repos/heretic-monkey.link/publish/mynsweepr-angular/

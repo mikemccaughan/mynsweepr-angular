@@ -1,4 +1,4 @@
-import { Difficulty } from './difficulty.js';
+import { Difficulty } from './index.js';
 
 describe('Difficulty', () => {
   it('should create an instance', () => {

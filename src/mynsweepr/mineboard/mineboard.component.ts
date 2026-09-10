@@ -1,7 +1,6 @@
-import { Component, OnInit, input, ChangeDetectionStrategy } from '@angular/core';
-import { Minecell, Mineboard, BoardState } from '../classes/index.js';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
+import { Minecell, Mineboard, BoardState, Utils } from '../classes/index.js';
 import { MynsweeprService } from '../mynsweepr.service.js';
-import { Utils } from '../classes/utils.js';
 
 @Component({
     selector: 'app-mineboard',
@@ -10,13 +9,12 @@ import { Utils } from '../classes/utils.js';
     changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
-export class MineboardComponent implements OnInit {
+export class MineboardComponent {
   readonly mineboard = input<Mineboard>();
 
   public readonly cells: Minecell[] = this.mineboard()?.cells ?? [];
   public cell: Minecell = new Minecell();
-
-  private board: BoardState = new BoardState();
+  public board: BoardState = new BoardState();
 
   get classes(): { [key: string]: boolean } {
     const classes: { [key: string]: boolean } = {
@@ -25,7 +23,7 @@ export class MineboardComponent implements OnInit {
       'type-16': false,
       'type-30': false
     };
-    const mineboard = this.mineboard();
+    const mineboard = this.mineboard() ?? new Mineboard();
     if (Utils.isGood(mineboard.difficulty.type, 1, 3)) {
       classes[`type-${mineboard.difficulty.type}`] = true;
       if (mineboard.difficulty.type === '?' && mineboard.difficulty.width) {
@@ -42,8 +40,5 @@ export class MineboardComponent implements OnInit {
 
   constructor(private boardSvc: MynsweeprService) {
     this.boardSvc.board.subscribe((board: BoardState) => this.board = board);
-  }
-
-  ngOnInit() {
   }
 }

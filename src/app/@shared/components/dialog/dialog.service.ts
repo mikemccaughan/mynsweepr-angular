@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { DialogComponent } from './dialog.component.js';
+import { DialogComponent } from './dialog.component';
 
 @Injectable({
   providedIn: 'root'
