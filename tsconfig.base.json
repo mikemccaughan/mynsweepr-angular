@@ -11,25 +11,14 @@
     "importHelpers": true,
     "target": "esnext",
     "useDefineForClassFields": false,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "ESNext",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["ESNext", "dom"],
     "types": [],
     "strict": true,
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@mynclasses/*": [
-        "./src/mynsweepr/classes/*"
-      ],
-      "@dialog/*": [
-        "./src/app/@shared/components/dialog/*"
-      ]
+      "@/*": ["./src/*"],
+      "@mynclasses/*": ["./src/mynsweepr/classes/*"],
+      "@dialog/*": ["./src/app/@shared/components/dialog/*"]
     }
   },
   "angularCompilerOptions": {

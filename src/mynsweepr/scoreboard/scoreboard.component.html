@@ -1,5 +1,7 @@
 <aside>
-  <span class="best-elapsed">🥇&nbsp;{{ scoreboard() !== undefined ? scoreboard()!.highScore : '00:00:00' }}</span>
+  <span class="best-elapsed"
+    >🥇&nbsp;{{ scoreboard() !== undefined ? scoreboard()!.highScore : "00:00:00" }}</span
+  >
   <span class="elapsed">⏱&nbsp;{{ scoreboard()!.timeElapsed }}</span>
   <span class="remaining">💣&nbsp;{{ scoreboard()!.minesRemaining }}</span>
 </aside>

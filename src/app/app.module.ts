@@ -1,24 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MynsweeprModule } from '../mynsweepr/mynsweepr.module';
-import { SharedModule } from './@shared/shared.module';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { MynsweeprModule } from "../mynsweepr/mynsweepr.module";
+import { SharedModule } from "./@shared/shared.module";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    CommonModule,
-    BrowserModule,
-    SharedModule,
-    MynsweeprModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent],
+  imports: [CommonModule, BrowserModule, SharedModule, MynsweeprModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

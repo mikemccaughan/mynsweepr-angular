@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, firstValueFrom, Observable } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject, firstValueFrom, Observable } from "rxjs";
 
-import { BoardState, Coords, Direction, Minecell } from '../mynsweepr/classes/index.js';
+import { BoardState, Coords, Direction, Minecell } from "../mynsweepr/classes/index.js";
 
 /**
  * Provides methods to manage the game state of Mynsweepr.
  */
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class MynsweeprService {
   /**
@@ -20,7 +20,7 @@ export class MynsweeprService {
    */
   board: Observable<BoardState> = this.boardSource.asObservable();
 
-  constructor() { }
+  constructor() {}
 
   /**
    * Sets the current game board state.
@@ -41,7 +41,9 @@ export class MynsweeprService {
     board.mineboard.activeCoords.y = y;
     const cell = board.mineboard.getCell(x, y);
     if (cell) {
-      board.mineboard.cells.filter(cel => cel.index !== cell.index).forEach(cel => cel.isActive = false);
+      board.mineboard.cells
+        .filter((cel) => cel.index !== cell.index)
+        .forEach((cel) => (cel.isActive = false));
       cell.isActive = true;
       this.setBoard(board);
     }
@@ -69,9 +71,13 @@ export class MynsweeprService {
   moveActiveCell(board: BoardState, direction: Direction): void {
     const { x, y } = board.mineboard.activeCoords;
     const coords = new Coords(x, y);
-    if (!coords) { return; }
+    if (!coords) {
+      return;
+    }
     const diff = board.difficulty;
-    if (!diff) { return; }
+    if (!diff) {
+      return;
+    }
     const maxX = diff.width;
     const maxY = diff.height;
     switch (direction) {
@@ -121,7 +127,7 @@ export class MynsweeprService {
    * @param cell The cell to reveal.
    */
   async showCell(board: BoardState, cell: Minecell): Promise<void> {
-    if (await firstValueFrom(board.timer.running) === false) {
+    if ((await firstValueFrom(board.timer.running)) === false) {
       board.timerId = board.timer.start();
     }
     if (!cell.isHidden) {
@@ -143,9 +149,13 @@ export class MynsweeprService {
   }
 
   async checkForWin(board: BoardState): Promise<void> {
-    if (board.mineboard.cells.every((cell: Minecell) => cell.isAFlaggedMine || cell.isDisplayedAndNotAMine)) {
-      board.status = 'won';
-      if (await firstValueFrom(board.timer.running) === true) {
+    if (
+      board.mineboard.cells.every(
+        (cell: Minecell) => cell.isAFlaggedMine || cell.isDisplayedAndNotAMine,
+      )
+    ) {
+      board.status = "won";
+      if ((await firstValueFrom(board.timer.running)) === true) {
         board.timer.stop(board.timerId!);
       }
       board.scoreboard.saveElapsed(board.difficulty);
@@ -154,16 +164,18 @@ export class MynsweeprService {
   }
 
   async epicFail(board: BoardState): Promise<void> {
-    board.mineboard.cells.filter((cell: Minecell) => cell.isHidden).forEach((cell: Minecell) => cell.isHidden = false);
-    board.status = 'lost';
-    if (await firstValueFrom(board.timer.running) === true) {
+    board.mineboard.cells
+      .filter((cell: Minecell) => cell.isHidden)
+      .forEach((cell: Minecell) => (cell.isHidden = false));
+    board.status = "lost";
+    if ((await firstValueFrom(board.timer.running)) === true) {
       board.timer.stop(board.timerId!);
     }
     this.setBoard(board);
   }
 
   acknowledgedStatus(board: BoardState): void {
-    if (['lost', 'won'].includes(board.status ?? '')) {
+    if (["lost", "won"].includes(board.status ?? "")) {
       board.mineboard.buildBoard();
     }
 
@@ -221,9 +233,9 @@ export class MynsweeprService {
 
   async showSurroundingCells(board: BoardState, cell: Minecell): Promise<void> {
     const surroundingCells = this.getSurroundingCells(board, cell);
-    const flagCount = surroundingCells.filter(cel => cel.hasFlag).length;
+    const flagCount = surroundingCells.filter((cel) => cel.hasFlag).length;
     if (cell.nearby === 0 || cell.nearby === flagCount) {
-      await Promise.all(surroundingCells.map(cel => !cel.hasFlag && this.showCell(board, cel)));
+      await Promise.all(surroundingCells.map((cel) => !cel.hasFlag && this.showCell(board, cel)));
     }
 
     this.checkForWin(board);
@@ -255,7 +267,7 @@ export class MynsweeprService {
   }
 
   downRight(board: BoardState, x: number, y: number): Minecell | undefined {
-    return board.mineboard.getCell(x + 1, y + 1);;
+    return board.mineboard.getCell(x + 1, y + 1);
   }
 
   downLeft(board: BoardState, x: number, y: number): Minecell | undefined {

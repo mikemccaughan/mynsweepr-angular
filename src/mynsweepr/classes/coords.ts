@@ -1,4 +1,4 @@
-import { EventEmitter } from '@angular/core';
+import { EventEmitter } from "@angular/core";
 
 export class Coords {
   public coordsChanged: EventEmitter<Coords>;
@@ -36,7 +36,7 @@ export class Coords {
     this.xChanged = new EventEmitter<number>();
     this.yChanged = new EventEmitter<number>();
     this.coordsChanged = new EventEmitter<Coords>();
-    this.xField = x??0;
-    this.yField = y??0;
+    this.xField = x ?? 0;
+    this.yField = y ?? 0;
   }
 }

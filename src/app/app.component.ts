@@ -1,26 +1,25 @@
-import { Component, HostListener, ChangeDetectionStrategy } from '@angular/core';
-import { DialogService } from './@shared/components/dialog/dialog.service.js';
+import { Component, HostListener, ChangeDetectionStrategy } from "@angular/core";
+import { DialogService } from "./@shared/components/dialog/dialog.service.js";
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.sass'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.sass"],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
 export class AppComponent {
-  title = 'mynsweepr-angular';
+  title = "mynsweepr-angular";
 
-  constructor(private dialogSvc: DialogService) {
-  }
+  constructor(private dialogSvc: DialogService) {}
 
-  @HostListener('keyup', ['$event'])
+  @HostListener("keyup", ["$event"])
   appKeyup(event: KeyboardEvent) {
     event.preventDefault();
-    if ((event.shiftKey && event.key === "/") || event.key === '?') {
-      this.dialogSvc.open('keys');
+    if ((event.shiftKey && event.key === "/") || event.key === "?") {
+      this.dialogSvc.open("keys");
     }
-    if (event.key === 'Esc') {
+    if (event.key === "Esc") {
       this.dialogSvc.closeAll();
     }
   }

@@ -1,2 +1,2 @@
-export { DialogComponent } from './dialog.component.js';
-export { DialogService } from './dialog.service.js';
+export { DialogComponent } from "./dialog.component.js";
+export { DialogService } from "./dialog.service.js";

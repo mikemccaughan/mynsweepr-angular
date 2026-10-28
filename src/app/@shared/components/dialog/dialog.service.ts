@@ -1,8 +1,8 @@
-import { EventEmitter, Injectable } from '@angular/core';
-import { DialogComponent } from './dialog.component';
+import { EventEmitter, Injectable } from "@angular/core";
+import { DialogComponent } from "./dialog.component";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class DialogService {
   public components: { [key: string]: DialogComponent } = {};
@@ -18,7 +18,9 @@ export class DialogService {
       throw new Error("id must be provided to the DialogService's register method");
     }
     if (component == null || !(component instanceof DialogComponent)) {
-      throw new Error("component of type DialogComponent must be provided to the DialogService's register method");
+      throw new Error(
+        "component of type DialogComponent must be provided to the DialogService's register method",
+      );
     }
     this.components[id] = component;
     this.components[id].closed.subscribe((closedId: string) => {
@@ -31,7 +33,9 @@ export class DialogService {
     this.closeAllExcept(id);
     // open this one
     if (!Reflect.has(this.components, id)) {
-      throw new Error(`A dialog with the id "${id}" was not registered with the dialog service. Registered ids: ${Object.keys(this.components)?.join(', ')}`);
+      throw new Error(
+        `A dialog with the id "${id}" was not registered with the dialog service. Registered ids: ${Object.keys(this.components)?.join(", ")}`,
+      );
     }
     this.components[id].open();
   }
@@ -39,9 +43,11 @@ export class DialogService {
     this.components[id].close();
   }
   public closeAll() {
-    Object.keys(this.components).forEach(key => this.close(key));
+    Object.keys(this.components).forEach((key) => this.close(key));
   }
   public closeAllExcept(id: string) {
-    Object.keys(this.components).filter(cid => cid !== id).forEach(key => this.close(key));
+    Object.keys(this.components)
+      .filter((cid) => cid !== id)
+      .forEach((key) => this.close(key));
   }
 }

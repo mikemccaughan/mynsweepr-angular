@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject, Observable } from "rxjs";
 
 export interface ITimer {
   running: Observable<boolean>;
@@ -10,7 +10,7 @@ export interface ITimer {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class Timer implements ITimer {
   private elapsedSource: BehaviorSubject<string>;
@@ -23,20 +23,20 @@ export class Timer implements ITimer {
   private started: number = Date.now();
   private timerId = -1;
   constructor() {
-    this.timeFormatter = new Intl.DateTimeFormat('en-US', {
+    this.timeFormatter = new Intl.DateTimeFormat("en-US", {
       hour12: false,
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit'
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
     } as Intl.DateTimeFormatOptions);
-    this.zeroTime = this.timeFormatter.format(this.offsetAtEpoch).replace(/^24/, '00');
+    this.zeroTime = this.timeFormatter.format(this.offsetAtEpoch).replace(/^24/, "00");
     this.elapsedSource = new BehaviorSubject<string>(this.zeroTime);
     this.elapsed = this.elapsedSource.asObservable();
     this.runningSource = new BehaviorSubject<boolean>(false);
     this.running = this.runningSource.asObservable();
   }
   start(): number {
-    if (typeof this.timerId === 'undefined' || this.timerId === -1) {
+    if (typeof this.timerId === "undefined" || this.timerId === -1) {
       this.started = Date.now();
       this.timerId = window.setInterval(() => this.updateElapsed(), 500);
       this.runningSource.next(true);
@@ -45,7 +45,9 @@ export class Timer implements ITimer {
   }
   updateElapsed(): void {
     const elapsedMs = Date.now() - this.started;
-    this.elapsedSource.next(this.timeFormatter.format(this.offsetAtEpoch + elapsedMs).replace(/^24/, '00'));
+    this.elapsedSource.next(
+      this.timeFormatter.format(this.offsetAtEpoch + elapsedMs).replace(/^24/, "00"),
+    );
   }
   stop(timerId: number): void {
     window.clearInterval(timerId);

@@ -1,21 +1,16 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { MynsweeprComponent } from './mynsweepr.component.js';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { MynsweeprComponent } from "./mynsweepr.component.js";
 
 const mynsweeprRoutes: Routes = [
   {
-    path: 'mynsweepr',
-    component: MynsweeprComponent
-  }
+    path: "mynsweepr",
+    component: MynsweeprComponent,
+  },
 ];
 
-
 @NgModule({
-  imports: [
-    RouterModule.forChild(mynsweeprRoutes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forChild(mynsweeprRoutes)],
+  exports: [RouterModule],
 })
-export class MynsweeprRoutingModule { }
+export class MynsweeprRoutingModule {}

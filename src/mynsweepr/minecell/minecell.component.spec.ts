@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
-import { MinecellComponent } from './minecell.component.js';
+import { MinecellComponent } from "./minecell.component.js";
 
-describe('MinecellComponent', () => {
+describe("MinecellComponent", () => {
   let component: MinecellComponent;
   let fixture: ComponentFixture<MinecellComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MinecellComponent ]
-    })
-    .compileComponents();
+      declarations: [MinecellComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('MinecellComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

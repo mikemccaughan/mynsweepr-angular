@@ -1,4 +1,4 @@
-import { EventEmitter } from '@angular/core';
+import { EventEmitter } from "@angular/core";
 
 export class Minecell {
   isHiddenChanged: EventEmitter<Minecell>;
@@ -55,8 +55,8 @@ export class Minecell {
   }
   constructor(cell?: Partial<Minecell>) {
     if (cell) {
-      this.isHidden = typeof cell.isHidden === 'boolean' ? cell.isHidden : true;
-      this.hasFlag = typeof cell.hasFlag === 'boolean' ? cell.hasFlag : false;
+      this.isHidden = typeof cell.isHidden === "boolean" ? cell.isHidden : true;
+      this.hasFlag = typeof cell.hasFlag === "boolean" ? cell.hasFlag : false;
       this.index = cell.index ?? -1;
       this.value = cell.value ?? 0;
       this.x = cell?.x ?? -1;
@@ -74,7 +74,7 @@ export class Minecell {
       active: this.isActive,
       nearby: !!this.nearby && !this.hasFlag,
       [`nearby-${this.nearby}`]: !!this.nearby,
-      mine: this.hasMine && !this.hasFlag
+      mine: this.hasMine && !this.hasFlag,
     };
   }
   get isAFlaggedMine(): boolean {

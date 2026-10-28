@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
-import { MynsweeprComponent } from './mynsweepr.component.js';
+import { MynsweeprComponent } from "./mynsweepr.component.js";
 
-describe('MynsweeprComponent', () => {
+describe("MynsweeprComponent", () => {
   let component: MynsweeprComponent;
   let fixture: ComponentFixture<MynsweeprComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MynsweeprComponent ]
-    })
-    .compileComponents();
+      declarations: [MynsweeprComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('MynsweeprComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

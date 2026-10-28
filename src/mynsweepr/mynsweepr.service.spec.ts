@@ -1,11 +1,11 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { MynsweeprService } from './mynsweepr.service.js';
+import { MynsweeprService } from "./mynsweepr.service.js";
 
-describe('MynsweeprService', () => {
+describe("MynsweeprService", () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', () => {
+  it("should be created", () => {
     const service: MynsweeprService = TestBed.inject(MynsweeprService);
     expect(service).toBeTruthy();
   });

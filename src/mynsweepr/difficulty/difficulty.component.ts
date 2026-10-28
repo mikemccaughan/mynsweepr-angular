@@ -1,13 +1,13 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
-import { BoardState, Difficulty } from '../classes/index.js';
-import { MynsweeprService } from '../mynsweepr.service.js';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from "@angular/core";
+import { BoardState, Difficulty } from "../classes/index.js";
+import { MynsweeprService } from "../mynsweepr.service.js";
 
 @Component({
-    selector: 'app-difficulty',
-    templateUrl: './difficulty.component.html',
-    styleUrls: ['./difficulty.component.sass'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+  selector: "app-difficulty",
+  templateUrl: "./difficulty.component.html",
+  styleUrls: ["./difficulty.component.sass"],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
 export class DifficultyComponent implements OnInit {
   // TODO: Skipped for migration because:
@@ -24,6 +24,5 @@ export class DifficultyComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

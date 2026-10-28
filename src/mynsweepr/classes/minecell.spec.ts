@@ -1,7 +1,7 @@
-import { Minecell } from './index.js';
+import { Minecell } from "./index.js";
 
-describe('Minecell', () => {
-  it('should create an instance', () => {
+describe("Minecell", () => {
+  it("should create an instance", () => {
     expect(new Minecell()).toBeTruthy();
   });
 });

@@ -1,22 +1,25 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { MynsweeprService } from './mynsweepr.service.js';
-import { BoardState } from '../mynsweepr/classes/index.js';
-import { DialogComponent, DialogService } from '../app/@shared/components/dialog/index.js';
+import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
+import { MynsweeprService } from "./mynsweepr.service.js";
+import { BoardState } from "../mynsweepr/classes/index.js";
+import { DialogComponent, DialogService } from "../app/@shared/components/dialog/index.js";
 
 @Component({
-    selector: 'app-mynsweepr',
-    templateUrl: './mynsweepr.component.html',
-    styleUrls: ['./mynsweepr.component.sass'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+  selector: "app-mynsweepr",
+  templateUrl: "./mynsweepr.component.html",
+  styleUrls: ["./mynsweepr.component.sass"],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
 export class MynsweeprComponent implements OnInit {
   state: BoardState = new BoardState();
 
-  constructor(private mynsweeprSvc: MynsweeprService, private dialogSvc: DialogService) {
+  constructor(
+    private mynsweeprSvc: MynsweeprService,
+    private dialogSvc: DialogService,
+  ) {
     this.dialogSvc.dialogClosed.subscribe((dialog: DialogComponent) => {
-      const dialogId = dialog.id() ?? '';
-      if (['lost','won'].includes(dialogId)) {
+      const dialogId = dialog.id() ?? "";
+      if (["lost", "won"].includes(dialogId)) {
         this.mynsweeprSvc.acknowledgedStatus(this.state);
       }
     });
@@ -24,11 +27,11 @@ export class MynsweeprComponent implements OnInit {
       this.state = state;
       if (state.status) {
         switch (state.status) {
-          case 'lost':
-            this.dialogSvc.open('lost');
+          case "lost":
+            this.dialogSvc.open("lost");
             break;
-          case 'won':
-            this.dialogSvc.open('won');
+          case "won":
+            this.dialogSvc.open("won");
             break;
         }
       }
@@ -39,7 +42,5 @@ export class MynsweeprComponent implements OnInit {
     this.dialogSvc.close(id);
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

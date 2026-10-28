@@ -1,4 +1,4 @@
-import { Difficulty, Mineboard, Scoreboard, ITimer, Timer } from './index.js';
+import { Difficulty, Mineboard, Scoreboard, ITimer, Timer } from "./index.js";
 
 /**
  *  Represents the state of the Minesweeper game board.
@@ -49,7 +49,7 @@ export class BoardState {
   difficultyHeightChanged(height: number): void {
     this.mineboard.difficulty = {
       ...this.mineboard.difficulty,
-      height
+      height,
     };
     this.timer.reset();
     this.loadHighScore();
@@ -58,7 +58,7 @@ export class BoardState {
   difficultyWidthChanged(width: number): void {
     this.mineboard.difficulty = {
       ...this.mineboard.difficulty,
-      width
+      width,
     };
     this.timer.reset();
     this.loadHighScore();
@@ -66,11 +66,11 @@ export class BoardState {
   }
   difficultyTypeChanged(type: string): void {
     const w = isNaN(parseInt(type, 10)) ? 30 : parseInt(type, 10);
-    const h = type === '9' ? 9 : type === '16' ? 16 : type === '30' ? 16 : 16;
+    const h = type === "9" ? 9 : type === "16" ? 16 : type === "30" ? 16 : 16;
     this.mineboard.difficulty = {
       type,
       width: w,
-      height: h
+      height: h,
     };
     this.difficulty.width = w;
     this.difficulty.height = h;
@@ -81,6 +81,6 @@ export class BoardState {
   loadHighScore() {
     this.scoreboard.loadScores();
     const difficulty = JSON.stringify(JSON.stringify(this.mineboard.difficulty));
-    this.scoreboard.highScore = this.scoreboard.highScores[difficulty] ?? '--:--:--';
+    this.scoreboard.highScore = this.scoreboard.highScores[difficulty] ?? "--:--:--";
   }
 }
