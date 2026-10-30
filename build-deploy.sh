@@ -14,4 +14,4 @@ build() {
 deploy() {
     rm -r ../publish/mynsweepr-angular; cp -r dist/mynsweepr-angular/browser/ ../publish/mynsweepr-angular/; 
 }
-npmCheckUpdatesAndInstall(); updateBrowsersList(); build(); deploy(); echo "DONE with ${dirname $PWD}";
+npmCheckUpdatesAndInstall && updateBrowsersList && build && deploy && echo "DONE with ${dirname $PWD}";

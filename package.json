@@ -1,6 +1,6 @@
 {
   "name": "mynsweepr-angular",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -70,5 +70,6 @@
       "version": "24.22.1",
       "onFail": "download"
     }
-  }
+  },
+  "packageManager": "yarn@4.18.1"
 }
