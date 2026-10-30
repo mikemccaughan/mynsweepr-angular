@@ -21,11 +21,14 @@ export class Utils {
         .filter((rule) => rule.constructor.name === "CSSStyleRule") // further filter to the style rules (as opposed to media rules, etc.)
         .map((rule) => (rule as CSSStyleRule).selectorText); // then just get the selectors
     }
+    // then return true if the class selector on its own is there, or
+    // it's used in combination with another; NB: this could produce
+    // false positives if the class name is a substring of another class name, 
+    // but that is unlikely to happen in practice.
     return (
-      Utils.selectors.includes(`.${className}`) || // then return true if the class selector on its own is there, or
+      Utils.selectors.includes(`.${className}`) ||
       Utils.selectors.some((selector) => selector.includes(`.${className}`))
-    ); // it's used in combination with another; NB: this could produce
-    // false positives if the class name is a substring of another class name, but that is unlikely to happen in practice.
+    ); 
   }
   /**
    * Defines a CSS class in the document's stylesheets.

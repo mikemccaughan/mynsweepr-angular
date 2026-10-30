@@ -27,10 +27,10 @@
     "rxjs": "^7.8.2",
     "tslib": "^2.8.1",
     "uuid": "^14.0.2",
+    "vite": "^8.3.5",
     "zone.js": "^0.16.3"
   },
   "devDependencies": {
-    "@angular/cli": "^22.1.8",
     "@angular/compiler-cli": "^22.1.6",
     "@angular/language-service": "^22.1.6",
     "@types/jasmine": "^6.0.0",
@@ -46,16 +46,29 @@
     "karma-coverage-istanbul-reporter": "^3.0.3",
     "karma-jasmine": "^5.1.0",
     "karma-jasmine-html-reporter": "^2.3.0",
+    "piscina": "^5.3.2",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3",
     "update-browserslist-db": "^1.3.3"
   },
-  "overrides": {},
+  "overrides": {
+    "@angular/build": {
+      "piscina": "$piscina",
+      "vite": "$vite"
+    }
+  },
   "allowScripts": {
-    "core-js@3.50.0": true,
     "esbuild@0.28.2": true,
     "lmdb@3.5.6": true,
     "msgpackr-extract@3.0.4": true,
-    "@parcel/watcher@2.6.0": true
+    "@parcel/watcher@2.6.0": true,
+    "core-js@3.51.0": true
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.22.1",
+      "onFail": "download"
+    }
   }
 }
