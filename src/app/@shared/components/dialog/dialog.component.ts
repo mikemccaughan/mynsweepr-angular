@@ -21,7 +21,7 @@ export class DialogComponent implements OnInit {
   constructor(
     public dialogService: DialogService,
     public element: ElementRef,
-  ) {}
+  ) { }
 
   public readonly id = input<string>();
   public readonly title = input<string>();
@@ -54,7 +54,7 @@ export class DialogComponent implements OnInit {
     if (!classes) {
       throw new Error("Dialog classes are not defined");
     }
-    classes.show = true;
+    classes['show'] = true;
     this.element.nativeElement.querySelector("a[href],input,button,select").focus();
   }
 
@@ -63,8 +63,8 @@ export class DialogComponent implements OnInit {
     if (!classes) {
       throw new Error("Dialog classes are not defined");
     }
-    let wasOpen = classes.show;
-    classes.show = false;
+    let wasOpen = classes['show'];
+    classes['show'] = false;
     if (this.previouslyFocused && this.previouslyFocused instanceof HTMLElement) {
       this.previouslyFocused.focus();
     }

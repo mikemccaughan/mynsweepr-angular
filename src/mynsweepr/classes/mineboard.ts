@@ -145,6 +145,7 @@ export class Mineboard {
     } else if (typeof index === "number" && index >= 0 && index < this.cells.length) {
       return this.cells[index];
     }
+    return undefined;
   }
   public setCell(
     indexOrX: number,
